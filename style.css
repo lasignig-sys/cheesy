@@ -1,0 +1,30 @@
+.button-area{
+    display:flex;
+    gap:20px;
+    justify-content:flex-start;
+    margin-top:10px;
+}
+
+@keyframes floatIn{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+#yesBtn{
+    opacity:0;
+    animation:floatIn 1s ease forwards;
+    animation-delay:2.2s;
+}
+
+#noBtn{
+    position:fixed;
+    opacity:0;
+    animation:floatIn 1s ease forwards;
+    animation-delay:2.4s;
+}
