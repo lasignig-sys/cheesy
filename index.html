@@ -1,0 +1,21 @@
+<h1 id="typewriter"></h1>
+const text = "Hey!\nWant to play a game of chess?";
+const typewriter = document.getElementById("typewriter");
+
+let i = 0;
+
+function typeText() {
+    if (i < text.length) {
+
+        if(text.charAt(i) === "\n"){
+            typewriter.innerHTML += "<br>";
+        } else {
+            typewriter.innerHTML += text.charAt(i);
+        }
+
+        i++;
+        setTimeout(typeText, 65);
+    }
+}
+
+typeText();
